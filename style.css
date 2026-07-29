@@ -1,0 +1,142 @@
+*,
+*:before,
+*:after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: fixed;
+}
+
+.container {
+    background: rgba(0, 0, 0, 0.5);
+    width: 40%;
+    min-width: 500px;
+    height: auto; /* Content height adapts but will not affect set height */
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    padding: 20px 0;
+    padding-bottom: 40px;
+    border-radius: 10px;
+    box-shadow: rgb(255, 255, 255) 0px 2px 8px;
+}
+
+.timer-display {
+    position: relative;
+    width: 92%;
+    background: rgba(0, 0, 0, 0.5);
+    left: 4%;
+    font-family: 'Roboto mono', monospace;
+    color: white;
+    font-size: 30px;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 5px;
+    box-shadow: rgb(255, 255, 255) 0px 1px 4px, rgb(255, 255, 255) 0px 0px 0px 3px;
+}
+
+.buttons {
+    width: 90%;
+    margin: 60px auto 0 auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Ensures buttons adjust on smaller screens */
+    gap: 15px; 
+}
+
+.S,
+.P,
+.R {
+    width: 120px;
+    height: 45px;
+    background: rgba(81, 255, 0, 0.5);
+    color: #fff;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.S:hover {
+    color: black;
+    background: #51ff0080;
+    box-shadow: 0 0 10px #51ff0080, 0 0 40px #51ff0080, 0 0 80px #51ff0080;
+}
+
+.P {
+    background: rgba(255, 0, 0, 0.5);
+}
+
+.P:hover {
+    color: black;
+    background: #ff0000;
+    box-shadow: 0 0 10px #ff0000, 0 0 40px #ff0000, 0 0 80px #ff0000;
+}
+
+.R {
+    background: rgba(255, 255, 0, 0.5);
+}
+
+.R:hover {
+    color: black;
+    background: #FFFF00;
+    box-shadow: 0 0 10px #FFFF00, 0 0 40px #FFFF00, 0 0 80px #FFFF00;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .container {
+        width: 80%;
+        min-width: unset;
+        
+    }
+
+    .timer-display {
+        font-size: 24px; 
+        padding: 30px;
+    }
+
+    .buttons {
+        gap: 10px;
+    }
+
+    .S,
+    .P,
+    .R {
+        width: 100px; 
+        height: 40px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 90%; 
+        min-width: unset;
+    }
+
+    .timer-display {
+        font-size: 20px; 
+        padding: 20px;
+    }
+
+    .S,
+    .P,
+    .R {
+        width: 90px; 
+        height: 35px;
+        font-size: 14px;
+    }
+}
